@@ -1,0 +1,19 @@
+
+
+
+/* TOGGLE SWITCH BTNS */
+.switches [type="checkbox"]:checked + label span:last-child {
+    background: var(--green);
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::before {
+    transform: translateX(24px);
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::after {
+    width: 14px;
+    height: 14px;
+    left: 8px;
+    background-image: url('checkmark-switcher.svg');
+    background-size: 14px 14px;
+}
