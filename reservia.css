@@ -1,3 +1,27 @@
+/* General rules */
+
+body {}
+
+
+/* header */
+.top-logo { width: 25%;}
+.header-top {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top-row, .top-nav {
+    display:flex;
+    flex-direction: row;
+}
+
+
+
+/* responsive imgs */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
 
 
 /* toggle-switch container (= label) */
