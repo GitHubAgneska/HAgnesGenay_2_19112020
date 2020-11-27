@@ -1,75 +1,101 @@
 /* General rules */
 
+@font-face { 
+    font-family: 'Raleway-Regular';
+    src: url('assets/fonts/Raleway-Regular.ttf') format('ttf');
+    src: url('assets/fonts/Raleway-Regular.eot') format('eot');
+    src: url('assets/fonts/Raleway-Regular.woff') format('woff');
+}
+@font-face { 
+    font-family: 'Raleway-Medium';
+    src: url('Raleway-Medium.ttf') format('ttf');
+    src: url('Raleway-Medium.eot') format('eot');
+    src: url('Raleway-Medium.woff') format('woff');
+}
+@font-face { 
+    font-family: 'Raleway-Bold';
+    src: url('Raleway-Bold.ttf') format('ttf');
+    src: url('Raleway-Bold.eot') format('eot');
+    src: url('Raleway-Bold.woff') format('woff');
+}
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-html { 
-    font-size: 14px; 
-    font-weight: 300; 
-    color: #333; 
+html {
+    font-size: 14px;
     text-rendering: optimizeLegibility;
 }
-body { background-color: #fff; }
+body { 
+    background-color: #fff;
+    font-family: 'Raleway-Regular', Arial, Helvetica, sans-serif !important;
+}
 
+h1 { font-size: 1.5em;}
+h2 { font-size: 1.4em;}
+h3 { font-size: 1.2em; }
+h4 { font-size: .8em; }
+p { font-size: 1.2em; }
+
+.main-wrapper {
+    width: 90%;
+    max-width: 1336px;
+    margin: auto;
+}
+
+.main-wrapper a { 
+    text-decoration: none;
+    color: #000000;
+}
+
+
+/* imgs = responsive */
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
 
 /* bleu #0065FC /  #DEEBFF  / gris #F2F2F2 (fond) */
 
-@font-face { 
-    font-family: 'Raleway-Regular';
-    src: url ('Raleway-Regular.ttf') format ('ttf');
-    src: url ('Raleway-Regular.eot') format ('eot');
-    src: url ('Raleway-Regular.woff') format ('woff');
-}
-@font-face { 
-    font-family: 'Raleway-Medium';
-    src: url ('Raleway-Medium.ttf') format ('ttf');
-    src: url ('Raleway-Medium.eot') format ('eot');
-    src: url ('Raleway-Medium.woff') format ('woff');
-}
-@font-face { 
-    font-family: 'Raleway-Bold';
-    src: url ('Raleway-Bold.ttf') format ('ttf');
-    src: url ('Raleway-Bold.eot') format ('eot');
-    src: url ('Raleway-Bold.woff') format ('woff');
-}
+
 
 /* header */
-.top-logo { width: 25%;}
-.header-top {
+.top-logo { width: 25%; min-width: 60px; max-width: 100px; background-color: pink;} 
+
+.top-nav {
     display:flex;
     flex-direction: row;
-  /*   justify-content: space-between; */
-}
-.top-row, .top-nav {
-    display:flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(130, 130, 238);
 }
 
 /* top-row adapt to small screens */
 @media screen and (max-width: 576px) {
-    .top-row {
-        flex-wrap: wrap;
-    }
-    .top-nav {}
+
+
 }
 
+.motto { background-color: yellow; height:100px;}
 
+.search-bar { background-color: pink;}
 
-/* responsive imgs */
-.img-responsive {
-    max-width: 100%;
-    height: auto;
+/* -- filters : toggle-switch BTNS --- */
+
+.filtres {
+    background-color: yellow;
+    display: flex;
+    flex-flow: row wrap;
 }
-
 
 /* toggle-switch container (= label) */
 .switch {
     position: relative;
     display: inline-block;
-    width: 120px;
-    height: 34px;
+    min-width: 120px;
+    height: 50px;
 }
 
 /* hide original checkbox */
@@ -81,7 +107,6 @@ input[type="checkbox"] {
     box-sizing: border-box;
     margin: 3px 0 0;
 }
-
 
 /* round inner btn */
 .slider.round::before {
@@ -134,6 +159,19 @@ input:checked+.slider {
     font-weight: 400;
     margin: 0;
     padding: 9px 34px;
-    font-size: .99em;
-    color: white;
 }
+/* --- */
+
+
+/* section 1 most popular */
+.popular { background-color: pink;}
+
+/* section 2 housing  */
+.housing { background-color: yellow;}
+
+/* section 3 activities  */
+.activities { background-color: pink;}
+
+/* footer */
+
+footer { background-color: yellow;}
