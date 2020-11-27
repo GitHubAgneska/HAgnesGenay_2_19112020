@@ -1,18 +1,58 @@
 /* General rules */
 
-body {}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html { 
+    font-size: 14px; 
+    font-weight: 300; 
+    color: #333; 
+    text-rendering: optimizeLegibility;
+}
+body { background-color: #fff; }
 
+
+/* bleu #0065FC /  #DEEBFF  / gris #F2F2F2 (fond) */
+
+@font-face { 
+    font-family: 'Raleway-Regular';
+    src: url ('Raleway-Regular.ttf') format ('ttf');
+    src: url ('Raleway-Regular.eot') format ('eot');
+    src: url ('Raleway-Regular.woff') format ('woff');
+}
+@font-face { 
+    font-family: 'Raleway-Medium';
+    src: url ('Raleway-Medium.ttf') format ('ttf');
+    src: url ('Raleway-Medium.eot') format ('eot');
+    src: url ('Raleway-Medium.woff') format ('woff');
+}
+@font-face { 
+    font-family: 'Raleway-Bold';
+    src: url ('Raleway-Bold.ttf') format ('ttf');
+    src: url ('Raleway-Bold.eot') format ('eot');
+    src: url ('Raleway-Bold.woff') format ('woff');
+}
 
 /* header */
 .top-logo { width: 25%;}
 .header-top {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+  /*   justify-content: space-between; */
 }
 .top-row, .top-nav {
     display:flex;
     flex-direction: row;
+}
+
+/* top-row adapt to small screens */
+@media screen and (max-width: 576px) {
+    .top-row {
+        flex-wrap: wrap;
+    }
+    .top-nav {}
 }
 
 
