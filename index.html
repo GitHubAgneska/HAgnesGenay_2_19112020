@@ -17,11 +17,11 @@
     <meta property="og:description" content="Trouvez votre hébergement pour des vacances de rêve" />
 
     <link type="text/css" rel="stylesheet" href="reservia.css">
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
-    <!-- Bootstrap cdn -->
-   <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-
+<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ -->
     <!-- Font awesome cdn -->
     <script src="https://kit.fontawesome.com/711ecd1ff8.js" crossorigin="anonymous"></script>
 </head>
@@ -59,27 +59,27 @@
             </div>
             <div class="filtres">
                 <p>Filtres</p>
-                <div>
+                <div class="filters-container">
                     <label class="switch">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="slider round">
                             <p>Economique</p>
                         </span>
                     </label>
                     <label class="switch">
-                        <input type="checkbox" checked="checked">
+                        <input type="checkbox">
                         <span class="slider round">
                             <p>Familial</p>
                         </span>
                     </label>
                     <label class="switch">
-                        <input type="checkbox" checked="checked">
+                        <input type="checkbox">
                         <span class="slider round">
                             <p>Romantique</p>
                         </span>
                     </label>
                     <label class="switch">
-                        <input type="checkbox" checked="checked">
+                        <input type="checkbox">
                         <span class="slider round">
                             <p>Animaux autorisés</p>
                         </span>
@@ -100,11 +100,11 @@
                 <i class="fas fa-chart-line"></i>
             </div>
             <div class="pop-card">
-                <a href="">
-                    <figure>
+                <a href="" class="row">
+                    <figure class="col-xs-4">
                         <img src="imgs/housing/emile-guillemot-Bj_rcSC5XfE-unsplash_S.jpg" alt="photo hotel">
                     </figure>
-                    <div class="pop-card-text">
+                    <div class="pop-card-text col-xs-8">
                         <h3>Hôtel le soleil du matin</h3>
                         <p>Nuit à partir de 128€</p>
                         <div class="star-rating">
