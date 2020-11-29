@@ -190,40 +190,50 @@ input:checked+.slider {
 .popular {
 }
 
+/* align icon with title */
 .pop-header i { float: right; }
+
 .pop-card {
-    height:135px;
-    background-color: #fff; 
+    background-color: rgb(255, 185, 185); 
     border: 5px solid #fff;
-    border-radius:5px;
+    border-radius:30px;
     margin: 3% 0;
 }
 
+/* img container */
 figure { 
-    width: 100%; 
-    height:100%;
-    /* max-height: 135px; */
+    width: 100%;
+    height:135px;
     padding: 0 !important;
     margin: 0 !important;
     overflow: hidden;
 }
-
-figure img {
-    height: 135px;
-    width:auto;
+figure img {  
+    min-width:100%;
+    max-height:100%; 
     display: block;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 25px 0 0 25px;
 }
 
 .pop-card-text {
-    width:100%;
-    height:100%;
+    
 }
 
-.card-title {
-/*     line-height: 0.3; */
-}
+.card-title h3 { margin-bottom: 0;}
+.card-title p { margin-top: 0;}
 
-/* section 2 housing  */
+.pop-card-text .star-rating { }
+
+
+
+/* ================================== */
+/* ================================== */
+/* SECTION 2  housing  */
+/* ================================== */
+/* ================================== */
+
 .housing { background-color: yellow;}
 
 /* section 3 activities  */
