@@ -1,6 +1,9 @@
-/* General rules */
 
-/* bleu #0065FC /  #DEEBFF  / gris #F2F2F2 (fond) */
+/* ================================== */
+/* ================================== */
+/* General rules */
+/* ================================== */
+/* ================================== */
 
 @font-face { 
     font-family:'Raleway-Regular';
@@ -39,6 +42,8 @@ p  { font-size: 1em; }
 
 .grey-bg { background-color: #F2F2F2;}
 .bold { font-family:'Raleway-Bold', Arial, Helvetica, sans-serif; }
+.blue { color:  #0065FC; }
+.light-blue { color: #DEEBFF; }
 
 .main-wrapper {
     /* width: 90%; */
@@ -220,10 +225,12 @@ figure img {
 .card-title p { margin-top: 2%;}
 
 .pop-card-text .star-rating { 
-    
+
     position: absolute;
     bottom: 0;
 }
+.fa { color:#0065FC; font-weight: 100;}
+.fa.checked{ font-weight: 900;}
 
 
 
