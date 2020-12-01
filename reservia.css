@@ -56,7 +56,7 @@ body {
 h1 { font-size: 1.5em;}
 h2 { font-size: 1.4em;}
 h3 { font-size: 1.3em; }
-h4 { font-size: 1.1em; }
+h4 { font-size: 1.1em; font-family:'Raleway-Bold', Arial, Helvetica, sans-serif;}
 p  { font-size: 1em; }
 
 ul li { list-style: none; }
@@ -89,6 +89,10 @@ section { padding-top: 12%;}
 }
 
 input { border: transparent; }
+
+.card { 
+    box-shadow: 5px 10px 18px #888888;
+}
 
 
 
@@ -379,21 +383,20 @@ input:checked+.slider p { text-align: left;}
 .pop-header i { float: right; }
 
 .pop-card {
-    background-color: rgb(255, 185, 185); 
+    margin: 3% 0;
     border: 5px solid #fff;
     border-radius:25px;
-    margin: 3% 0;
 }
 
 /* img container */
-figure { 
+.pop-pic { 
     width: 100%;
     height:135px;
     padding: 0 !important;
     margin: 0 !important;
     overflow: hidden;
 }
-figure img {  
+.pop-pic img {  
     min-width:100%;
     max-height:100%; 
     display: block;
@@ -408,12 +411,10 @@ figure img {
 .card-title h4 { 
     margin-bottom: 0;
     padding-right: 15%;
-    font-family:'Raleway-Bold', Arial, Helvetica, sans-serif;
 }
 .card-title p { margin-top: 2%;}
 
 .pop-card-text .star-rating { 
-
     position: absolute;
     bottom: 0;
 }
@@ -428,11 +429,104 @@ figure img {
 /* ================================== */
 /* ================================== */
 
-.housing { background-color: yellow;}
+.housing { background-color: yellow; width: 90%; margin: auto;}
 
-/* section 3 activities  */
+.housing-card {
+    margin: 3% 0;
+    height: 200px; 
+    max-width: 100%;
+    border: 5px solid #fff;
+    border-radius:25px;
+}
+
+.housing-pic { 
+    height: 120px;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+}
+
+.housing-pic img {
+    min-width:100%;
+    max-height:100%; 
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.housing-card-text {
+    height: 65px;
+    padding: 2%;
+}
+
+.housing-card-text h4, .housing-card-text p {
+    margin: 0;
+    padding: 0;
+}
+
+.housing-card .star-rating { 
+    position: relative;
+    bottom: 0;
+}
+
+/* ================================== */
+/* ================================== */
+/* SECTION 2  activities */
+/* ================================== */
+/* ================================== */
 .activities { background-color: pink;}
 
-/* footer */
+.activ-card {
+    height: 200px;
+    margin: 3% 0;
+    border: 5px solid #fff;
+    border-radius:25px;
+}
+
+.active-pic { 
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden; 
+}
+
+.activ-pic img {
+    min-width:100%;
+    max-height:100%; 
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* activity pics adapt to mobile screens */
+@media screen and (max-width: 576px) {
+    .activ-pic {
+        height: 130px;
+    }
+}
+/*  activity pics  adapt to medium screens */
+@media screen and (min-width: 576px) and (max-width: 920px) {
+    .activ-pic {
+    }
+}
+/* activity pics adapt to desktop screens */
+@media screen and (min-width: 920px) {
+    .activ-pic {
+    }
+}
+
+
+
+
+
+/* ================================== */
+/* ================================== */
+/* ---- FOOTER --- */
+/* ================================== */
+/* ================================== */
 
 footer { background-color: yellow;}
