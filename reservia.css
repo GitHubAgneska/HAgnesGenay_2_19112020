@@ -64,6 +64,10 @@ section { padding-top: 12%;}
 .blue { color:  #0065FC; }
 .light-blue { color: #DEEBFF; }
 
+.w-90 {
+    width: 90%;
+    margin: auto;
+}
 
 .img-responsive {
     max-width: 100%;
@@ -76,6 +80,8 @@ section { padding-top: 12%;}
     max-width: 1336px;
     margin: auto;
 }
+
+input { border: transparent; }
 
 
 
@@ -90,21 +96,21 @@ section { padding-top: 12%;}
 header { height: 650px;}
 
 .top-row { 
-    background-color: lightyellow;
+   /*  background-color: lightyellow; */
     display:flex;
     flex-flow: row wrap;
 }
 
 .top-logo { 
-    background-color: rgb(231, 191, 198);
+   /*  background-color: rgb(231, 191, 198); */
     min-width: 60px; 
     max-width: 100px; 
 } 
 
 .top-nav {
+/*     background-color: rgb(130, 130, 238); */
     display:flex;
     flex-flow: row wrap;
-    background-color: rgb(130, 130, 238);
 }
 .subscribe, .nav-item{ text-align: center; }
 
@@ -154,34 +160,46 @@ header { height: 650px;}
     .nav-item.active { border-top:3px solid #0065FC;}
 }
 
-/*  end header -----  */
+/* ======= end header ============== */
+/* ================================== */
 
 
 .motto { 
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding-top:10%;
     padding-bottom:3%;
 }
 
 .search-bar { 
-    margin: 0 !important; /* override bootstrap presets */
+    display: flex;
+    flex-flow: row nowrap;
     height: 50px;
-    background-color: pink;
-    border: 1px solid grey;
+    border: 1px solid #F2F2F2;
     border-radius: 15px;
 }
+
+.input-container { width:60%; }
+.input-container input { height:100%; width:100%;}
+
+.searchBar-icon { 
+    width:20%;
+  /* center icon inside */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.searchBar-icon.loc { 
+    background-color:#F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.searchBar-icon.magnifier { background-color: #0065FC; border-radius: 15px;}
 .input-container > input[placeholder]{ font-size: 14px;text-align: center;}
 
-.search-icon , .input-container { 
-    border: 1px solid red;
-    height:100%;
-    width:100%;
-}
-.search-icon i, .input-container input { 
-    height:100%;
-}
 /* search bar icons size */
 .fas { font-size: 18px;}
+.magnifier a > .fas { color: #fff; }
 
 
 
@@ -189,10 +207,8 @@ header { height: 650px;}
 /* -- filters : toggle-switch BTNS --- */
 /* ================================== */
 .filtres {
-    background-color: yellow;
-
-    margin: auto;
     width: 90%;
+    margin: auto;
     display: flex;
     flex-flow: row wrap;
 }
@@ -205,15 +221,14 @@ header { height: 650px;}
 
 /* toggle-switch container (= label) */
 .switch {
-    background-color:red;
     position: relative;
     display: inline-block;
     min-width: 165px;
     height: 50px;
     margin-right:2%;
-    margin-bottom:2%;
-    
+    margin-bottom:2%;   
 }
+
 
 /* hide original checkbox */
 .switch input {
@@ -229,45 +244,60 @@ input[type="checkbox"] {
 .slider.round::before {
     border-radius: 50%;
 }
+
+.slider.round {
+    border-radius: 34px;
+}
 .slider::before {
     position: absolute;
     height: 48px;
     width: 48px;
     background-color: #DEEBFF;
+
     /* icon inside btn */
     font-family: "FontAwesome";
     content: "\f53a";
+    color:#0065FC;
     font-size: larger;
+
     /* center icon inside */
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 
-
     /* smooth btn transition */
     -webkit-transition: .4s;
     transition: .4s;
 }
-.slider.round {
-    border-radius: 34px;
+
+/* filters icons */
+.slider.family::before {
+    content: "\f1ae";
+}
+.slider.heart::before {
+    content: "\f004";
+}
+.slider.dog::before {
+    content: "\f6d3";
 }
 
 /* anim inner btn slide */
 input:checked+.slider::before {
-    -webkit-transform: translateX(86px);
-    -ms-transform: translateX(86px);
-    transform: translateX(86px);
+    -webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    transform: translateX(100px);
 }
 
-input:checked+.slider {
+input:checked+.slider { 
     background-color: #DEEBFF;
+    border: 1px solid #0065FC;
+    color: red;
 }
+input:checked+.slider > p { text-align: left;}
+
 
 .slider {
-
-    background-color: violet;
-
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -282,7 +312,6 @@ input:checked+.slider {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-
 }
 
 .slider p {
@@ -291,6 +320,9 @@ input:checked+.slider {
     margin-left: 60px;
     margin-right: 15px;   
 }
+
+/* effect on hover */
+.slider:hover {  border:5px solid blue;}
 
 
 
