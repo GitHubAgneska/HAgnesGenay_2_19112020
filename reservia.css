@@ -65,9 +65,11 @@ section { padding-top: 12%;}
 .light-blue { color: #DEEBFF; }
 
 
-/* ================================== */
-/* ================================== */
-
+.img-responsive {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
 
 .main-wrapper {
     /* width: 90%; */
@@ -75,12 +77,8 @@ section { padding-top: 12%;}
     margin: auto;
 }
 
-/* imgs = responsive */
-.img-responsive {
-    max-width: 100%;
-    display: block;
-    height: auto;
-}
+
+
 
 /* ================================== */
 /* ================================== */
@@ -93,7 +91,6 @@ header { height: 650px;}
 
 .top-row { 
     background-color: lightyellow;
-
     display:flex;
     flex-flow: row wrap;
 }
@@ -116,7 +113,7 @@ header { height: 650px;}
 /* top-row adapt to mobile screens */
 @media screen and (max-width: 576px) {
 
-    /* .top-row { padding: 5% 0;} */
+    .top-row { padding: 5% 0;}
     .top-logo { width:30%;}
     .empty { width:40%; }
     .subscribe { width:30%; }
@@ -149,11 +146,12 @@ header { height: 650px;}
 
     .top-logo { width:10%;}
     .empty { width:60%; }
-    .subscribe { width:10%; order:4; }
+    .subscribe { width:10%; order:4; border-top: 3px solid transparent;}
     .top-nav { width:20%;}
-    .nav-item { width:50%; }
+    .nav-item { width:50%;border-top: 3px solid transparent; }
 
-    .nav-item.active { /* border-top:3px solid #0065FC; */}
+
+    .nav-item.active { border-top:3px solid #0065FC;}
 }
 
 /*  end header -----  */
@@ -192,6 +190,9 @@ header { height: 650px;}
 /* ================================== */
 .filtres {
     background-color: yellow;
+
+    margin: auto;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -201,11 +202,13 @@ header { height: 650px;}
     justify-content: flex-start;
 }
 
+
 /* toggle-switch container (= label) */
 .switch {
+    background-color:red;
     position: relative;
     display: inline-block;
-    min-width: 150px;
+    min-width: 165px;
     height: 50px;
     margin-right:2%;
     margin-bottom:2%;
@@ -224,17 +227,22 @@ input[type="checkbox"] {
 
 /* round inner btn */
 .slider.round::before {
-    /* border-radius: 50%; */
+    border-radius: 50%;
 }
 .slider::before {
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     background-color: #DEEBFF;
     /* icon inside btn */
     font-family: "FontAwesome";
     content: "\f53a";
+    font-size: larger;
     /* center icon inside */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
 
     /* smooth btn transition */
@@ -257,6 +265,9 @@ input:checked+.slider {
 }
 
 .slider {
+
+    background-color: violet;
+
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -267,13 +278,18 @@ input:checked+.slider {
     border: 2px solid lightgrey;
     -webkit-transition: .4s;
     transition: .4s;
+    /* adapt width to txt content */
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+
 }
 
 .slider p {
     font-weight: 400;
-    margin: 0;
-    padding: 9px 34px;
-    text-align: right;
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 15px;   
 }
 
 
