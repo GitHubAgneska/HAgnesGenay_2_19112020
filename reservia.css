@@ -51,6 +51,8 @@ h3 { font-size: 1.3em; }
 h4 { font-size: 1.1em; }
 p  { font-size: 1em; }
 
+ul li { list-style-type: none; }
+
 .light { font-family:'Raleway-Light', Arial, Helvetica, sans-serif; }
 .bold { font-family:'Raleway-Bold', Arial, Helvetica, sans-serif; }
 .semiBold {font-family:'Raleway-SemiBold', Arial, Helvetica, sans-serif; }
@@ -92,8 +94,48 @@ section { padding-top: 12%;}
 /* ================================== */
 
 
-
 header { height: 650px;}
+
+/* top-row adapt to mobile screens */
+@media screen and (max-width: 576px) {
+
+.top-row { width:100%; padding: 5% 0;}
+.top-logo { width:30%;}
+.top-row.subscribe { width:30%; }
+.top-nav {
+        width:100%;
+        padding: 2% 0;
+        justify-content: space-around;
+}
+.nav-item { 
+    width:50%;
+    text-align: center;
+    border-bottom:3px solid grey;
+}
+.nav-item.active { border-bottom:3px solid #0065FC;}
+
+}
+
+/* top-row adapt to desktop screens */
+@media screen and (min-width: 920px) {
+
+    .desktop-is-row { 
+        display:flex;
+        flex-flow: row nowrap; 
+    }
+
+    .top-nav { 
+        width:40%;
+    }
+}
+
+
+
+.top-row { 
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 
 .top-logo { 
     background-color: rgb(231, 191, 198);
@@ -102,21 +144,18 @@ header { height: 650px;}
 } 
 
 .top-nav {
-/*  display:flex;
-    flex-flow: row wrap; */
+    display:flex;
+    flex-flow: row wrap;
     background-color: rgb(130, 130, 238);
 }
 
-.top-nav a { margin: 0 3%; min-width:80px;}
-.top-nav p { margin: 0 3%;}
+.nav-item.active p, .subscribe p { color: #0065FC; }
 
-/* top-row adapt to small screens */
-@media screen and (max-width: 576px) {
+/*  -----  */
 
-}
 
 .motto { 
-    background-color: yellow;
+    border: 2px solid red;
     padding-top:10%;
     padding-bottom:3%;
 }
@@ -143,9 +182,9 @@ header { height: 650px;}
 
 
 
-
+/* ================================== */
 /* -- filters : toggle-switch BTNS --- */
-
+/* ================================== */
 .filtres {
     background-color: yellow;
     display: flex;
