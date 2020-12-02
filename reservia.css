@@ -482,6 +482,8 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* ================================== */
 .activities { width:90%; margin:auto; }
+.three-cards-container { background-color: lightpink;}
+
 
 .activ-card {
     height: 190px;
@@ -512,21 +514,22 @@ input:checked+.slider p { text-align: left;}
 .activ-text h4 { margin: 2%; }
 .activ-text { height: 55px; }
 
-/* activity pics adapt to mobile screens */
+/* activity cards adapt to mobile screens */
 @media screen and (max-width: 576px) {
-    /* .activ-pic {
-        height: 130px;
-    } */
+    .three-cards-container { width: 100%;}
+    
 }
-/*  activity pics  adapt to medium screens */
+/*  activity cards  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width: 920px) {
-    /* .activ-pic {
-    } */
+    .three-cards-container { width: 100%; display:flex; flex-direction: row;}
+    .two-cards-group { display:flex; flex-direction: column;}
+    .activ-card { width: 50% ;}
+    
 }
-/* activity pics adapt to desktop screens */
+/* activity cards adapt to desktop screens */
 @media screen and (min-width: 920px) {
-    /* .activ-pic {
-    } */
+    .three-cards-container { width: 50%;}
+    .activ-card { width: 25% ;}
 }
 
 
