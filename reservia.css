@@ -57,9 +57,12 @@ h1 { font-size: 1.5em;}
 h2 { font-size: 1.4em;}
 h3 { font-size: 1.3em; }
 h4 { font-size: 1.1em; font-family:'Raleway-Bold', Arial, Helvetica, sans-serif;}
+h5 { font-size: 1em; font-family:'Raleway-Bold', Arial, Helvetica, sans-serif;}
 p  { font-size: 1em; }
 
+ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
+
 a {  text-decoration: none; color: #000000; }
 section { padding-top: 12%;}
 
@@ -388,9 +391,9 @@ input:checked+.slider p { text-align: left;}
     border-radius:25px;
 }
 
-/* img container */
+/* img container (figure) */
 .pop-pic { 
-    width: 100%;
+
     height:135px;
     padding: 0 !important;
     margin: 0 !important;
@@ -429,9 +432,10 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* ================================== */
 
-.housing { background-color: yellow; width: 90%; margin: auto;}
+.housing { width: 90%; margin: auto;}
 
 .housing-card {
+    
     margin: 3% 0;
     height: 200px; 
     max-width: 100%;
@@ -439,6 +443,7 @@ input:checked+.slider p { text-align: left;}
     border-radius:25px;
 }
 
+/* img container (figure) */
 .housing-pic { 
     height: 120px;
     padding: 0 !important;
@@ -476,17 +481,19 @@ input:checked+.slider p { text-align: left;}
 /* SECTION 2  activities */
 /* ================================== */
 /* ================================== */
-.activities { background-color: pink;}
+.activities { width:90%; margin:auto; }
 
 .activ-card {
-    height: 200px;
+    height: 190px;
     margin: 3% 0;
     border: 5px solid #fff;
     border-radius:25px;
 }
 
-.active-pic { 
+.activ-pic { 
     width: 100%;
+    height:135px;
+    max-height:100%;
     padding: 0 !important;
     margin: 0 !important;
     overflow: hidden; 
@@ -497,26 +504,29 @@ input:checked+.slider p { text-align: left;}
     max-height:100%; 
     display: block;
     object-fit: cover;
-    object-position: top;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    /* object-position: bottom; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
+
+.activ-text h4 { margin: 2%; }
+.activ-text { height: 55px; }
 
 /* activity pics adapt to mobile screens */
 @media screen and (max-width: 576px) {
-    .activ-pic {
+    /* .activ-pic {
         height: 130px;
-    }
+    } */
 }
 /*  activity pics  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width: 920px) {
-    .activ-pic {
-    }
+    /* .activ-pic {
+    } */
 }
 /* activity pics adapt to desktop screens */
 @media screen and (min-width: 920px) {
-    .activ-pic {
-    }
+    /* .activ-pic {
+    } */
 }
 
 
@@ -529,4 +539,21 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* ================================== */
 
-footer { background-color: yellow;}
+.footer-list-container { display: flex;
+}
+
+/* footer adapt to mobile + medium screens */
+@media screen and (max-width: 920) {
+    .footer-list-container { 
+        flex-direction: column;
+    }
+}
+
+
+/* footer adapt to desktop screens */
+@media screen and (min-width: 920px) {
+    .footer-list-container { 
+        flex-direction: row;
+    }
+}
+
