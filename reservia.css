@@ -484,9 +484,9 @@ input:checked+.slider p { text-align: left;}
 .activities { width:90%; margin:auto; }
 .three-cards-container { background-color: lightpink;}
 
-
 .activ-card {
     height: 190px;
+    width:100%;
     margin: 3% 0;
     border: 5px solid #fff;
     border-radius:25px;
@@ -511,23 +511,45 @@ input:checked+.slider p { text-align: left;}
     border-top-right-radius: 20px;
 }
 
-.activ-text h4 { margin: 2%; }
-.activ-text { height: 55px; }
+.activ-text { height: 45px; position: relative; }
+.activ-text h4 { 
+    position: absolute;
+    display: inline-block;
+    margin: 15px;
+}
 
 /* activity cards adapt to mobile screens */
 @media screen and (max-width: 576px) {
-    .three-cards-container { width: 100%;}
+    .all-cards-container { width: 100%; display: flex; flex-flow: column nowrap;}
+    /* .three-cards-container { width: 100%;} */
     
 }
 /*  activity cards  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width: 920px) {
-    .three-cards-container { width: 100%; display:flex; flex-direction: row;}
-    .two-cards-group { display:flex; flex-direction: column;}
-    .activ-card { width: 50% ;}
+
+    .all-cards-container { display: flex; flex-flow: row nowrap;}
+    /* cards main layout */
+    .three-cards-container { width: 100%; height:445px; display:flex; flex-direction: row;justify-content: space-between;}
+    .two-cards-group { width: 50%;display:flex; flex-direction: column;justify-content: space-between; }
+    /* .two-cards-group.activ-pic { height: 50%;} */
+
+    .activ-card { width:95%; margin: 0; }
+    .xl { height: 100%; }
+    .xl .activ-pic { height: 390px;}
+    .l { height: 50%;}
+    .l .activ-pic { height: 235px;}
+    .m { height: 60%; }
+    .s {  height: 40%;}
+    .xs {  height: 40%;}
+
+    /* cards content */
+
+    
     
 }
 /* activity cards adapt to desktop screens */
 @media screen and (min-width: 920px) {
+    .all-cards-container { display: flex; flex-flow: column nowrap;}
     .three-cards-container { width: 50%;}
     .activ-card { width: 25% ;}
 }
