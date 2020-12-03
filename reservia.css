@@ -527,13 +527,22 @@ input:checked+.slider p { text-align: left;}
 /*  activity cards  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width: 920px) {
 
-    .all-cards-container { display: flex; flex-flow: row nowrap;}
-    /* cards main layout */
-    .three-cards-container { width: 100%; height:445px; display:flex; flex-direction: row;justify-content: space-between;}
-    .two-cards-group { width: 50%;display:flex; flex-direction: column;justify-content: space-between; }
+    .all-cards-container { display: flex; flex-flow: column nowrap;}
+
+    .three-cards-container { 
+        width: 100%; 
+        height:445px; 
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 6%;
+    }
+
+    .two-cards-group { width: 49%; display:flex; flex-direction: column;justify-content: space-between; }
+    .one-card { width: 49%;}
     /* .two-cards-group.activ-pic { height: 50%;} */
 
-    .activ-card { width:95%; margin: 0; }
+    .activ-card {  margin: 0; }
     .xl { height: 100%; }
     .xl .activ-pic { height: 390px;}
     .l { height: 50%;}
@@ -542,10 +551,7 @@ input:checked+.slider p { text-align: left;}
     .s {  height: 40%;}
     .xs {  height: 40%;}
 
-    /* cards content */
-
-    
-    
+    /* cards content */  
 }
 /* activity cards adapt to desktop screens */
 @media screen and (min-width: 920px) {
@@ -554,6 +560,44 @@ input:checked+.slider p { text-align: left;}
     .activ-card { width: 25% ;}
 }
 
+
+/*  section ACTIV VERSION 2 */
+.activities-version2 { width: 90%; margin: auto;}
+
+
+.activities-version2 figure { 
+    border:2px solid green;
+    height: 190px;
+    position:relative;
+    margin: 3% 0;
+}
+.activities-version2 figure img {  
+    height:135px;
+    width:100%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.activities-version2 figure figcaption { margin: 5%;position: absolute;;}
+
+@media screen and (min-width: 576px) and (max-width: 920px) {
+
+    .activities-version2 figure { width: 50%;}
+    .pic-group { 
+        max-height: 500px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+    }
+    
+    .activities-version2 figure:nth-of-type(1),
+    .activities-version2 figure:nth-of-type(4) { height: 500px; }
+
+    
+}
 
 
 
