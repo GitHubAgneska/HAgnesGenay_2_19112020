@@ -427,41 +427,44 @@ input:checked+.slider p { text-align: left;}
 
 .pop-card {
     height: 140px;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     margin: 3% 0;
     border: 5px solid #fff;
     border-radius:25px;
+    position: relative;
 }
 .pop-card figure { 
-    width: 33%;
-    height: 100%;
+    width: 40%;
+    height:130px;
+    position: absolute;
     float: left;
-    position: relative;
     padding-right: 15px;
     padding-left: 15px;
     overflow: hidden;
-}
-
-/* img container (figure) */
-.pop-pic { 
-    height:135px;
     padding: 0 !important;
     margin: 0 !important;
-    overflow: hidden;
 }
-.pop-pic img {  
+
+.pop-card figure img {  
     min-width:100%;
     max-height:100%; 
     display: block;
     object-fit: cover;
-    object-position: top;
+/*     object-position: top; */
     border-radius: 20px 0 0 20px;
 }
 
 .pop-card-text {
-    height: 125px;
-    width: 66%;
+    height: 130px;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    padding-left: 4%;
+    background-color: #fff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 .card-title h4 { 
     margin-bottom: 0;
@@ -495,7 +498,6 @@ input:checked+.slider p { text-align: left;}
 .housing { width: 90%; margin: auto;}
 
 .housing-card {
-    
     margin: 3% 0;
     height: 200px; 
     max-width: 100%;
