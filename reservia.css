@@ -73,7 +73,11 @@ ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
 
 a {  text-decoration: none; color: #000000; }
-section { padding-top: 12%;}
+
+/* adapt to mobile screens */
+@media screen and (max-width: 576px) {
+    section { padding-top: 12%;}
+}
 
 .light { font-family:'Raleway-Light', Arial, Helvetica, sans-serif; }
 .bold { font-family:'Raleway-Bold', Arial, Helvetica, sans-serif; }
@@ -410,8 +414,15 @@ input:checked+.slider p { text-align: left;}
 }
 /*  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width: 920px) {
-    .sections-wrapper { height: 700px;}
+    .sections-wrapper { height: 800px;}
     .popular { width: 33%; }
+    .housing-cards-wrapper { 
+        margin: 0;
+        display: flex;
+        flex-flow: column wrap;
+        height: 100%;
+    }
+    .housing { width: 66%;}
 
 }
 @media screen and (min-width: 920px) {
@@ -479,14 +490,6 @@ input:checked+.slider p { text-align: left;}
 .fa { font-size: 12px; color:#F2F2F2;}
 .fa.checked{ font-weight: 900;color:#0065FC;}
 
-/* adapt to mobile screens */
-@media screen and (max-width: 576px) {}
-/*  adapt to medium screens */
-@media screen and (min-width: 576px) and (max-width: 920px) {
-    .pop-card { width: 335px; }
-}
-/* adapt to desktop screens */
-@media screen and (min-width: 920px) {}
 
 
 /* ================================== */
@@ -495,7 +498,6 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* ================================== */
 
-.housing { width: 90%; margin: auto;}
 
 .housing-card {
     margin: 3% 0;
@@ -536,6 +538,11 @@ input:checked+.slider p { text-align: left;}
 .housing-card .star-rating { 
     position: relative;
     bottom: 0;
+}
+
+/* adapt to mobile screens */
+@media screen and (max-width: 576px) {
+    .housing { width: 90%; margin: auto;}
 }
 
 /* ================================== */
