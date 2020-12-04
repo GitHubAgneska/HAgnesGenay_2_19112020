@@ -1,16 +1,19 @@
 
 
-/* search-bar adapt to mobile screens */
+/* adapt to mobile screens */
 @media screen and (max-width: 576px) {}
-/*  search-bar adapt to medium screens */
+/*  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width: 920px) {}
-/* top-row adapt to desktop screens */
+/* adapt to desktop screens */
 @media screen and (min-width: 920px) {}
 
-/* -webkit-transition: all 1s ease;
--ms-transition: all 1s ease;
--moz-transition: all 1s ease;
--o-transition: all 1s ease; */
+* {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
 
 /* ================================== */
 /* ================================== */
@@ -90,6 +93,12 @@ section { padding-top: 12%;}
     display: block;
     height: auto;
 }
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .main-wrapper {
     /* width: 90%; */
@@ -100,6 +109,10 @@ section { padding-top: 12%;}
 input { border: transparent; }
 
 .card { 
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.box-shadow {
     box-shadow: 5px 10px 18px #888888;
 }
 
@@ -385,21 +398,53 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* ================================== */
 
-.popular {
+
+.sections-wrapper { background-color: violet;}
+
+/* from display tablet and up : section 1/2 = side by side */
+@media screen and (min-width: 576px) {
+    .sections-wrapper {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+    }
+}
+/*  adapt to medium screens */
+@media screen and (min-width: 576px) and (max-width: 920px) {
+    .sections-wrapper { height: 700px;}
+    .popular { width: 33%; }
+
+}
+@media screen and (min-width: 920px) {
+    .sections-wrapper { height: 625px;}
 }
 
+
+
+
+
 /* align icon with title */
-.pop-header i { float: right; }
+.pop-header i { float: right; } /* to replace by '::before:content'  */
 
 .pop-card {
+    height: 140px;
+    display: flex;
+    flex-flow: row nowrap;
     margin: 3% 0;
     border: 5px solid #fff;
     border-radius:25px;
 }
+.pop-card figure { 
+    width: 33%;
+    height: 100%;
+    float: left;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow: hidden;
+}
 
 /* img container (figure) */
 .pop-pic { 
-
     height:135px;
     padding: 0 !important;
     margin: 0 !important;
@@ -416,6 +461,7 @@ input:checked+.slider p { text-align: left;}
 
 .pop-card-text {
     height: 125px;
+    width: 66%;
 }
 .card-title h4 { 
     margin-bottom: 0;
@@ -430,6 +476,14 @@ input:checked+.slider p { text-align: left;}
 .fa { font-size: 12px; color:#F2F2F2;}
 .fa.checked{ font-weight: 900;color:#0065FC;}
 
+/* adapt to mobile screens */
+@media screen and (max-width: 576px) {}
+/*  adapt to medium screens */
+@media screen and (min-width: 576px) and (max-width: 920px) {
+    .pop-card { width: 335px; }
+}
+/* adapt to desktop screens */
+@media screen and (min-width: 920px) {}
 
 
 /* ================================== */
@@ -574,11 +628,19 @@ input:checked+.slider p { text-align: left;}
 .activities-version2 { width: 90%; margin: auto;}
 
 .activities-version2 figure { 
-    border:2px solid green;
     position:relative;
+    border: 5px solid #fff;
+    border-radius:25px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.activities-version2 figure img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .activities-version2 figure figcaption { margin: 5%; position: absolute;}
+
 
 @media screen and (max-width: 576px) {
     .activities-version2 figure { height: 190px;  margin: 3% 0; }
@@ -592,8 +654,12 @@ input:checked+.slider p { text-align: left;}
     .activities-version2 figure figcaption { margin: 5%; position: absolute;}
 }
 
+@media screen and (min-width: 576px) and (max-width:919px ) {
+    .second-group { flex-flow: column wrap-reverse;}
+}
 
-@media screen and (min-width: 576px) and (max-width: 920px) {
+@media screen and (min-width: 576px)  {
+
     .activities-version2 figure { 
         width: 47%;
         display: inline-block;
@@ -610,9 +676,6 @@ input:checked+.slider p { text-align: left;}
         align-items: stretch;
         align-content: space-between;
     }
-
-    .reverse-order { flex-flow: column wrap-reverse;}
-
 
     .activities-version2 figure img {
         width:100%;
@@ -636,11 +699,27 @@ input:checked+.slider p { text-align: left;}
         margin: 0;
         bottom: 0;
         padding: 5%;
-        background-color: red;
+        background-color: #fff;
+    }  
+}
 
+
+@media screen and (min-width: 1200px) {
+    .activities-version2 { 
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
     }
 
+    .pic-group { 
+        width: 47%;
+        margin:0 auto auto 0;
+    }
+    .second-group { margin:0 0 0 auto;}
     
+    
+
+
 }
 
 
