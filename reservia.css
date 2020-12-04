@@ -1,19 +1,10 @@
 
-
 /* adapt to mobile screens */
 @media screen and (max-width: 576px) {}
 /*  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width: 920px) {}
 /* adapt to desktop screens */
 @media screen and (min-width: 920px) {}
-
-* {
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-}
 
 /* ================================== */
 /* ================================== */
@@ -51,7 +42,16 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+
+    scroll-behavior: smooth;
 }
+
 html {
     font-size: 14px;
     text-rendering: optimizeLegibility;
@@ -74,6 +74,7 @@ ul li { list-style: none; }
 
 a {  text-decoration: none; color: #000000; }
 
+/* section */
 /* adapt to mobile screens */
 @media screen and (max-width: 576px) {
     section { padding-top: 12%;}
@@ -119,7 +120,6 @@ input { border: transparent; }
 .box-shadow {
     box-shadow: 5px 10px 18px #888888;
 }
-
 
 
 
@@ -184,8 +184,6 @@ header { height: 650px;}
     
 /* top-row adapt to desktop screens */
 @media screen and (min-width: 920px) {
-
-    header { /* position: absolute; top: 0; */ }
 
     .top-logo { width:10%;}
     .empty { width:60%; }
@@ -547,129 +545,49 @@ input:checked+.slider p { text-align: left;}
 
 /* ================================== */
 /* ================================== */
-/* SECTION 2  activities */
+/* SECTION 3  activities */
 /* ================================== */
 /* ================================== */
-.activities { width:90%; margin:auto; }
-.three-cards-container { background-color: lightpink;}
 
-.activ-card {
-    height: 190px;
-    width:100%;
-    margin: 3% 0;
-    border: 5px solid #fff;
-    border-radius:25px;
-}
+.activities { width: 90%; margin: auto;}
 
-.activ-pic { 
-    width: 100%;
-    height:135px;
-    max-height:100%;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden; 
-}
-
-.activ-pic img {
-    min-width:100%;
-    max-height:100%; 
-    display: block;
-    object-fit: cover;
-    /* object-position: bottom; */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.activ-text { height: 45px; position: relative; }
-.activ-text h4 { 
-    position: absolute;
-    display: inline-block;
-    margin: 15px;
-}
-
-/* activity cards adapt to mobile screens */
-@media screen and (max-width: 576px) {
-    .all-cards-container { width: 100%; display: flex; flex-flow: column nowrap;}
-    /* .three-cards-container { width: 100%;} */
-    
-}
-/*  activity cards  adapt to medium screens */
-@media screen and (min-width: 576px) and (max-width: 920px) {
-
-    .all-cards-container { display: flex; flex-flow: column nowrap;}
-
-    .three-cards-container { 
-        width: 100%; 
-        height:445px; 
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 6%;
-    }
-
-    .two-cards-group { width: 49%; display:flex; flex-direction: column;justify-content: space-between; }
-    .one-card { width: 49%;}
-    /* .two-cards-group.activ-pic { height: 50%;} */
-
-    .activ-card {  margin: 0; }
-    .xl { height: 100%; }
-    .xl .activ-pic { height: 390px;}
-    .l { height: 50%;}
-    .l .activ-pic { height: 235px;}
-    .m { height: 60%; }
-    .s {  height: 40%;}
-    .xs {  height: 40%;}
-
-    /* cards content */  
-}
-/* activity cards adapt to desktop screens */
-@media screen and (min-width: 920px) {
-    .all-cards-container { display: flex; flex-flow: column nowrap;}
-    .three-cards-container { width: 50%;}
-    .activ-card { width: 25% ;}
-}
-
-/* ========================== */
-/* ========================== */
-/*  section ACTIV VERSION 2 */
-/* ========================== */
-
-.activities-version2 { width: 90%; margin: auto;}
-
-.activities-version2 figure { 
+.activities figure { 
     position:relative;
     border: 5px solid #fff;
     border-radius:25px;
     box-shadow: 5px 10px 18px #888888;
 }
 
-.activities-version2 figure img {
+.activities figure img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.activities-version2 figure figcaption { margin: 5%; position: absolute;}
+.activities figure figcaption { margin: 5%; position: absolute;}
 
 
+/* adapt to mobile screens */
 @media screen and (max-width: 576px) {
-    .activities-version2 figure { height: 190px;  margin: 3% 0; }
-    .activities-version2 figure img {  
+    .activities figure { height: 190px;  margin: 3% 0; }
+    .activities figure img {  
         height:135px;
         width:100%;
         display: block;
         object-fit: cover;
         overflow: hidden;
     }
-    .activities-version2 figure figcaption { margin: 5%; position: absolute;}
+    .activities figure figcaption { margin: 5%; position: absolute;}
 }
 
+/*  adapt to medium screens */
 @media screen and (min-width: 576px) and (max-width:919px ) {
     .second-group { flex-flow: column wrap-reverse;}
 }
 
+/* from tablets onwards */
 @media screen and (min-width: 576px)  {
 
-    .activities-version2 figure { 
+    .activities figure { 
         width: 47%;
         display: inline-block;
         margin:0; 
@@ -686,7 +604,7 @@ input:checked+.slider p { text-align: left;}
         align-content: space-between;
     }
 
-    .activities-version2 figure img {
+    .activities figure img {
         width:100%;
         height:100%;
         object-fit: cover;
@@ -694,13 +612,13 @@ input:checked+.slider p { text-align: left;}
         overflow: hidden;
     }
     
-    .activities-version2 figure:nth-of-type(1),
-    .activities-version2 figure:nth-of-type(4) { height: 100%; }
-    .activities-version2 figure:nth-of-type(2) { height: 235px; }
-    .activities-version2 figure:nth-of-type(3) { height: 165px; }
-    .activities-version2 figure:nth-of-type(5) { height: 195px; }
+    .activities figure:nth-of-type(1),
+    .activities figure:nth-of-type(4) { height: 100%; }
+    .activities figure:nth-of-type(2) { height: 235px; }
+    .activities figure:nth-of-type(3) { height: 165px; }
+    .activities figure:nth-of-type(5) { height: 195px; }
 
-    .activities-version2 figure figcaption { 
+    .activities figure figcaption { 
         width: 100%;
         height: 50px;
         position: absolute;
@@ -712,9 +630,9 @@ input:checked+.slider p { text-align: left;}
     }  
 }
 
-
+/* adapt to desktop screens */
 @media screen and (min-width: 1200px) {
-    .activities-version2 { 
+    .activities { 
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
@@ -726,9 +644,6 @@ input:checked+.slider p { text-align: left;}
     }
     .second-group { margin:0 0 0 auto;}
     
-    
-
-
 }
 
 
