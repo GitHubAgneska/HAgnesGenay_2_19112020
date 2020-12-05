@@ -409,7 +409,6 @@ input:checked+.slider p { text-align: left;}
 /* SECTION1 + SECTION2 WRAPPER DESKTOP */
 /* ================================== */
 
-
 /*  medium & up to large screens : section 1+2 = above each other */
 
 /* medium & up: housing cards width to fit in rows */
@@ -667,7 +666,7 @@ input:checked+.slider p { text-align: left;}
     }  
 }
 
-/* adapt to desktop screens */
+/* large screens */
 @media screen and (min-width: 1200px) {
     .activities { 
         display: flex;
@@ -692,21 +691,17 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* ================================== */
 
-.footer-list-container { display: flex;
+.footer-list-container { 
+    display: flex;
 }
-
-/* footer adapt to mobile + medium screens */
-@media screen and (max-width: 920) {
-    .footer-list-container { 
-        flex-direction: column;
-    }
-}
+.footer-list ul li { padding: 1% 0;}
 
 
-/* footer adapt to desktop screens */
-@media screen and (min-width: 920px) {
+/* from medium screens & up */
+@media screen and (min-width: 576px) {
     .footer-list-container { 
         flex-direction: row;
     }
+    .footer-list { width: 30%; }
 }
 
