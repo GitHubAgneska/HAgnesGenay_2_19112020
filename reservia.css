@@ -75,9 +75,13 @@ ul li { list-style: none; }
 a {  text-decoration: none; color: #000000; }
 
 /* section */
-/* adapt to mobile screens */
+/* adapt to small screens */
 @media screen and (max-width: 576px) {
     section { padding-top: 12%;}
+}
+@media screen and (min-width: 576px) and (max-width: 920px) {
+/* adapt to medium screens */
+section {}
 }
 
 .light { font-family:'Raleway-Light', Arial, Helvetica, sans-serif; }
@@ -401,19 +405,55 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 
 
-.sections-wrapper { background-color: violet;}
+/* ================================== */
+/* SECTION1 + SECTION2 WRAPPER DESKTOP */
+/* ================================== */
 
-/* from display tablet and up : section 1/2 = side by side */
+
+/*  medium & up to large screens : section 1+2 = above each other */
+
+/* medium & up: housing cards width to fit in rows */
 @media screen and (min-width: 576px) {
-    .sections-wrapper {
+    .housing-card { width:30%;}
+    .housing { background-color: #F2F2F2;}
+}
+
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+    .sections-wrapper { height: 800px;}
+    .pop-cards-wrapper { 
         display: flex;
-        flex-flow: row-reverse nowrap;
+        flex-flow: row nowrap;
+    }
+    .pop-card { width: 90%; margin: 4% 1%;}
+    .pop-card .card-title h4 { margin: 0; }
+    .housing-cards-wrapper { 
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        height: 100%;
     }
 }
-/*  adapt to medium screens */
-@media screen and (min-width: 576px) and (max-width: 920px) {
-    .sections-wrapper { height: 800px;}
-    .popular { width: 33%; }
+
+/* from large screens and up : section 1+2 = side by side */
+@media screen and (min-width: 1200px) {
+    .sections-wrapper {
+        height: 625px;
+        display: flex;
+        flex-flow: row-reverse nowrap;}
+
+    .popular { 
+        width: 33%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    .pop-cards-wrapper { margin: 0;
+        display: flex;
+        flex-flow: column wrap;
+        height: 100%;}
+    .pop-card { margin: 3% 0;}
+
     .housing-cards-wrapper { 
         margin: 0;
         display: flex;
@@ -423,23 +463,21 @@ input:checked+.slider p { text-align: left;}
     .housing { width: 66%;}
 
 }
-@media screen and (min-width: 920px) {
-    .sections-wrapper { height: 625px;}
+
+/* small screens */
+@media screen and (max-width: 576px) {
+    .pop-card { width: 100%; margin: 3% 0;}
 }
 
-
-
-
-
 /* align icon with title */
-.pop-header i { float: right; } /* to replace by '::before:content'  */
+.pop-header i { float: right; } /* to replace by '::before:content' ? (=> SEO ?)  */
 
 .pop-card {
     height: 140px;
-    width: 100%;
+
     display: flex;
     flex-flow: row nowrap;
-    margin: 3% 0;
+
     border: 5px solid #fff;
     border-radius:25px;
     position: relative;
@@ -495,7 +533,6 @@ input:checked+.slider p { text-align: left;}
 /* SECTION 2  housing  */
 /* ================================== */
 /* ================================== */
-
 
 .housing-card {
     margin: 3% 0;
