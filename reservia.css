@@ -164,6 +164,46 @@ input { border: transparent; }
 /* ================================== */
 /* ================================== */
 
+
+
+
+
+/* ===== TESTS REDO HEADER  */
+
+.test-header nav { 
+    background-color: black;
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.A { background-color: lightpink;}
+.B { background-color: orange; }
+.C { background-color: lightgreen; }
+.D { background-color: lavender;}
+
+/* mobile */
+.test-header nav div { flex-basis: 50%; }
+
+.test-header nav div:nth-of-type(1) {}
+
+
+
+
+
+
+
+
+/* ===== TESTS REDO HEADER  */
+.top-logo { background-color: lightpink;}
+.empty { background-color: orange; }
+.subscribe { background-color: lightgreen; }
+
+.top-nav { background-color: lavender;}
+.nav-item { background-color: lightyellow; }
+/* =====  */
+
+
+
 .top-row {
     display:flex;
     flex-flow: row wrap;
@@ -214,7 +254,6 @@ input { border: transparent; }
 @media screen and (min-width: 576px) and (max-width: 920px) {
 
     .top-row { padding: 0;}
-/*     .top-elements { width:100%; } */
     .top-logo { width:30%;}
     .empty { width:55%; }
     .subscribe { width:25%; text-align: right; }
