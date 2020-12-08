@@ -1,3 +1,18 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {} 
+
 
 /* ================================== */
 /* ================================== */
@@ -36,11 +51,11 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 
     scroll-behavior: smooth;
 }
@@ -50,8 +65,7 @@ html {
     text-rendering: optimizeLegibility;
 }
 body { 
-    max-width: 1336px;
-    margin: 0;
+    margin: auto;
     background-color: #fff;
     font-family:'Raleway-Regular', Arial, Helvetica, sans-serif;
 }
@@ -68,16 +82,6 @@ ul li { list-style: none; }
 
 a {  text-decoration: none; color: #000000; }
 
-/* sections */
-/* small screens */
-@media screen and (max-width: 576px) {
-   /*  section { padding-top: 12%;} */
-}
-/* medium screens */
-@media screen and (min-width: 576px) and (max-width: 920px) {
-section {}
-}
-
 .light { font-family:'Raleway-Light', Arial, Helvetica, sans-serif; }
 .bold { font-family:'Raleway-Bold', Arial, Helvetica, sans-serif; }
 .semiBold {font-family:'Raleway-SemiBold', Arial, Helvetica, sans-serif; }
@@ -86,12 +90,18 @@ section {}
 .blue { color:  #0065FC; }
 .light-blue { color: #DEEBFF; }
 
-.w-90 {
-    width: 90%;
-    margin: auto;
+input { border: transparent; }
+
+.card { box-shadow: 0px 5px 15px #cacaca;}
+.card:hover { box-shadow: 5px 10px 18px #888888; }
+
+.img-responsive {
+    max-width: 100%;
+    display: block;
+    height: auto;
 }
 
-/* MAIN CONTENT MARGINS */
+/* MAIN CONTENT MARGINS  & PADDINGS */
 /* ================================== */
 
 /* small screens only */
@@ -125,38 +135,19 @@ section {}
 
 /* medium screens & up  */
 @media screen and (min-width: 768px) {
-    .header-wrapper,
+    .header-wrapper .motto,
+    .header-wrapper .search-bar-container,
+    .header-wrapper .filters,
     .main-wrapper,
     .footer-list-container {
         width: 90%;
         margin: auto;
     }
-
-    /* header top elements */
-    /* .top-row { line-height: 4;} */
-    .top-logo img { margin-top: 20px;}
     .search-bar { margin: 3% 0; width: 410px; }
 }
 
 
-input { border: transparent; }
 
-.card { 
-    box-shadow: 0px 5px 15px #cacaca;
-}
-.card:hover { 
-    box-shadow: 5px 10px 18px #888888;
-}
-
-.box-shadow {
-    box-shadow: 5px 10px 18px #888888;
-}
-
-.img-responsive {
-    max-width: 100%;
-    display: block;
-    height: auto;
-}
 
 /* ================================== */
 /* ================================== */
@@ -164,149 +155,66 @@ input { border: transparent; }
 /* ================================== */
 /* ================================== */
 
-
-
-
-
-/* ===== TESTS REDO HEADER  */
-
-.test-header nav { 
+.header-top .top-nav { 
     background-color: black;
     display:flex;
     flex-flow: row wrap;
+    /* tests */
+    margin-bottom: 10%;
 }
 
-.A { background-color: lightpink;}
-.B { background-color: orange; }
-.C { background-color: lightgreen; }
-.D { background-color: lavender;}
-
-/* mobile */
-@media screen and (max-width: 776px){
-
-    
-    .test-header nav div:nth-of-type(1) {flex-basis: 45%; margin-left: 5%; }
-    .test-header nav div:nth-of-type(2) { flex-basis: 45%; margin-right: 5%; }
-
-
-    .test-header nav div:nth-of-type(3),
-    .test-header nav div:nth-of-type(4) { flex-basis: 50%; }
-
-    /* elements min-width */
-    /* .test-header nav div { flex-basis: 50%; } */
-
-}
-
-/* tablet & up */
-@media screen and (min-width: 777px) {
-
-     /* elements min-width */
-    .test-header nav div { flex-basis: 10%; }
-    
-    /* elements width repartition  + re-order */
-    .test-header nav div:nth-of-type(1) { flex-grow: 15; }
-    .test-header nav div:nth-of-type(2) { flex-grow: 1; order:4; }
-    .test-header nav div:nth-of-type(3) { flex-grow: 1; }
-    .test-header nav div:nth-of-type(4) { flex-grow: 1; }
-}
-
-
-
-
-
-
-
-
-/* ===== TESTS REDO HEADER  */
-.top-logo { background-color: lightpink;}
-.empty { background-color: orange; }
-.subscribe { background-color: lightgreen; }
-
-.top-nav { background-color: lavender;}
-.nav-item { background-color: lightyellow; }
-/* =====  */
-
-
-
-.top-row {
-    display:flex;
-    flex-flow: row wrap;
-}
-
-.top-logo { 
+/* logo */
+.top-logo { background-color: #fff;}
+.top-logo a { 
+    display: block;
     min-width: 60px; 
     max-width: 100px; 
 } 
+/* subscribe */
+.subscribe { background-color: orange; text-align: right; }
 
-.top-nav {
-    display:flex;
-    flex-flow: row wrap;
-}
-.subscribe { text-align: right; }
-.nav-item { text-align: center; }
+/* hebergements */
+.housing { background-color: lightgreen; text-align: center;}
+/* activités */
+.activities { background-color: lavender;text-align: center;}
 
-.nav-item.active p, .subscribe p { color: #0065FC; }
+.active p, .subscribe p { color: #0065FC; }
 
-/* top-row adapt to mobile screens */
-@media screen and (max-width: 576px) {
 
-    .top-logo { width:30%;}
-    .empty { width: 40%; }
-    .subscribe { width:30%;}
+/* mobile + portrait tablet  : nav elements = on 2 rows and margin only on first row */
+@media screen and (max-width: 992px) {
 
-    .top-nav { width:100%; padding: 2% 0;}
-    .nav-item { 
-        width:50%; 
-        border-bottom:3px solid grey;
-    }
-    .nav-item.active { border-bottom:3px solid #0065FC;}
-}
+    .header-top { height:100px; }
 
-@media screen and (max-width: 920px) {
-    .top-row { padding-top: 15px;}
-}
+    .header-top .top-nav div:nth-of-type(1) { flex-basis: 45%; margin-left: 5%; }
+    .header-top .top-nav div:nth-of-type(2) { flex-basis: 45%; margin-right: 5%; }
 
-@media screen and (max-width: 576px) {
-    .top-logo { margin-left: 5%; }
-}
-@media screen and (min-width: 577px) and (max-width: 920px){
-    .top-logo { margin-left: 3%; }
+    .header-top .top-nav div:nth-of-type(3),
+    .header-top .top-nav div:nth-of-type(4) { flex-basis: 50%; }
 }
 
 
-/* top-row adapt to medium screens */
-@media screen and (min-width: 576px) and (max-width: 920px) {
+/* ladscape tablet & up  : all 4 top elements = on the same row */
+@media screen and (min-width: 993px) {
 
-    .top-row { padding: 0;}
-    .top-logo { width:30%;}
-    .empty { width:55%; }
-    .subscribe { width:25%; text-align: right; }
+    .header-top { height: 50px; }
+    .header-top .top-nav { margin: 0 5%; } /* force margin on top row */
+
+    /* elements min-width on the row*/
+    .header-top .top-nav div { 
+        flex-basis: 10%;
+        border-top: 3px solid transparent;}
     
-    .top-nav { width:100%; padding: 2% 0;}
-    .nav-item { 
-        width:50%; 
-        border-bottom:3px solid grey;
-    }
-    .nav-item.active { border-bottom:3px solid #0065FC;}
+    /* elements width repartition  + re-order */
+    .header-top .top-nav div:nth-of-type(1) { flex-grow: 15; }
+    .header-top .top-nav div:nth-of-type(2) { flex-grow: 1; order:4; }
+    .header-top .top-nav div:nth-of-type(3) { flex-grow: 1; }
+    .header-top .top-nav div:nth-of-type(4) { flex-grow: 1; }
 }
-    
-/* top-row adapt to desktop screens */
-@media screen and (min-width: 920px) {
 
-    .top-logo { width:10%;}
-    .empty { width:50%; }
-    .subscribe { width:10%; order:4; border-top: 3px solid transparent;}
-    
-    .top-nav { width:30%;}
-    .nav-item { width:50%; border-top: 3px solid transparent; }
-
-    .nav-item.active { border-top:3px solid #0065FC;}
-}
 
 .motto h1 { margin-bottom: 0; }
 .motto h4 { margin-top: 8px; }
-/* ======= end header ============== */
-
 
 
 /* ================================== */
