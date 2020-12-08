@@ -101,11 +101,17 @@ input { border: transparent; }
     height: auto;
 }
 
+/* ================================== */
 /* MAIN CONTENT MARGINS  & PADDINGS */
 /* ================================== */
 
-/* tests */
-.filtres { width: 90%; margin:auto;}
+.motto,
+.filters,
+.search-info,
+.footer-list-container { 
+    width: 90%;
+    margin: auto;
+}
 
 
 /* small screens only */
@@ -120,19 +126,12 @@ input { border: transparent; }
     .search-bar { margin: 3% 0; width: 330px; }
 }
 
-
 /* small + medium  screens */
 @media screen and (max-width: 768px) {
-    .motto,
-    .filters,
-
-    /* .searchBar-container */
-    .search-info,
     .popular .pop-header,
     .popular .pop-cards-wrapper,
     .housing,
-    .activities,
-    .footer-list-container { 
+    .activities { 
         width: 90%;
         margin: auto;
     }
@@ -140,11 +139,8 @@ input { border: transparent; }
 
 /* medium screens & up  */
 @media screen and (min-width: 768px) {
-    .header-wrapper .motto,
-    .header-wrapper .search-bar-container,
-    .header-wrapper .filters,
-    .main-wrapper,
-    .footer-list-container {
+    .search-bar-container,
+    .main-wrapper {
         width: 90%;
         margin: auto;
     }
@@ -181,13 +177,11 @@ input { border: transparent; }
 
 /* mobile + portrait tablet  : nav elements = on 2 rows and margin only on first row */
 @media screen and (max-width: 992px) {
-
     .header-top { 
         height: 155px;
         margin-top: 25px;
         margin-bottom: 30px;
     }
-    
     .top-logo, .subscribe { margin-bottom: 20px; }
 
     /* .top-logo &  .subscribe */
@@ -212,9 +206,7 @@ input { border: transparent; }
         margin: 0 5%;      /* force side margins on top row */
         line-height: 60px; /* distance from page top */
     }
-    .top-logo a { margin-top: 25px; }  /* distance from page top */
-
-    
+    .top-logo a { margin-top: 25px; }  /* distance from page top */    
     .top-nav div { 
         flex-basis: 5%;  /* elements min-width on the row*/
         border-top: 3px solid transparent;
@@ -308,35 +300,6 @@ input { border: transparent; }
 }
 
 
-
-
-
-/* <!-- FILTERS V2  TEST --> */
-.filtres { 
-    background-color: lightgreen;
-    height: 100px; 
-    display: flex;
-    flex-flow: row wrap;
-}
-.filtres p { background-color: lightyellow; width:100px;}
-
-.filtres-container { 
-    border: 5px solid red;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap; 
-}
-.filtre { 
-    background-color: lightsalmon; 
-    margin: 5% 2%; 
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.filtre .btn { width: 40px; }
-.filtre .text { margin-left: 60px; margin-right:15px; }
-
-
 /* ================================== */
 /* -- filters : toggle-switch BTNS --- */
 /* ================================== */
@@ -347,22 +310,23 @@ input { border: transparent; }
     display: flex;
     flex-flow: row wrap;
 }
-.filters-container { 
-    width: 90%; 
-    background-color: lightpink;
-    justify-content: space-evenly;
-}
-.slider-container { display: inline-block; background-color: lightblue; }
+.filters-container { width:100%; }
 
-/* up to medium screens : title is on one line */
+.slider-container { 
+    display: inline-block;
+    margin-right: 2%; margin-bottom: 2%;
+}
+
+/* up to medium screens : filters title sits on one line */
 @media screen and (max-width: 920px) {
-    .filters > p { width: 100%;}
+    .filters-container > p { width: 100%;}
     .slider-container { padding-right: 2%; }
 }
-/* large screens & up : title is on same line as filters */
+/* large screens & up : filters title sits on same line as filters */
 @media screen and (min-width: 920px) {
-    .filters > p { width: 100px;}
+    .filters-container > p { width: 100px;}
 }
+
 
 
 /* toggle-switch container (= <label> ) */
@@ -370,7 +334,6 @@ input { border: transparent; }
 .switch {
     position: relative;
     display: inline-block;
-   /*  min-width: 165px; */
     height: 50px; 
 }
 /* hide & move original checkbox */
@@ -414,7 +377,7 @@ input[type="checkbox"] {
 }
 
 /* filters icons */
-/* ================================== */
+/* ============= */
 .slider.family::before {
     content: "\f1ae";
 }
@@ -426,7 +389,7 @@ input[type="checkbox"] {
 }
 
 /* anim inner btn slide */
-/* ================================== */
+/* ==================== */
 input:checked+.slider::before {
     -webkit-transform: translateX(100px);
     -ms-transform: translateX(100px);
@@ -442,23 +405,16 @@ input:checked+.slider p { text-align: left;}
 
 
 /* Span element */
-/* ================================== */
+/* =============*/
 .slider {
-    position: absolute;
+    display: inline-block;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-color:#FFFF;
     border: 2px solid lightgrey;
 
     -webkit-transition: .4s;
+    -moz-transition: .4s;
     transition: .4s;
-    /* adapt width to txt content */
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
 }
 
 .slider p {
