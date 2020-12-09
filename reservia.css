@@ -128,10 +128,10 @@ input { border: transparent; }
 
 /* small + medium  screens */
 @media screen and (max-width: 768px) {
-    .popular .pop-header,
-    .popular .pop-cards-wrapper,
+    .popular,
+    .popular,
     .housing,
-    .activities { 
+    #activities { 
         width: 90%;
         margin: auto;
     }
@@ -140,12 +140,62 @@ input { border: transparent; }
 /* medium screens & up  */
 @media screen and (min-width: 768px) {
     .search-bar-container,
-    .main-wrapper {
+    .main-content-wrapper {
         width: 90%;
         margin: auto;
     }
     .search-bar { margin: 3% 0; width: 410px; }
 }
+
+
+/* ================================== */
+/* INNER CONTENT MARGINS  & PADDINGS */
+/* ================================== */
+
+/* SECTIONS  */
+
+
+
+/* sections title */
+.section-header { 
+    height: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.section-header h2 { margin-top: 0;}
+
+/* small screens only */
+@media screen and (max-width: 600px) {
+
+    section { 
+        padding-top: 35px;
+        padding-bottom: 25px;
+    }
+
+}
+
+/* medium screens & up  */
+@media screen and (min-width: 600px) {   
+    
+    section { padding-top: 40px; }
+}
+
+
+/* large screens & up  */
+@media screen and (min-width: 1200px) {  
+    
+    section.housing, section.popular { 
+        padding: 40px; 
+    }
+    
+    .housing .card { margin-right:30px; margin-bottom:30px;}
+
+    .housing h5 { height:30px; background-color:pink; }
+    
+}
+
+
+
 
 
 /* ================================== */
@@ -445,7 +495,7 @@ input:checked+.slider p { text-align: left;}
 /* medium & up: housing cards width to fit into rows of 3 elements */
 @media screen and (min-width: 576px) {
     .housing-card { width:30%;}
-    .housing, .popular  { background-color: #F2F2F2; border-radius:15px;padding: 2%;}
+    .popular-wrapper { background-color: #F2F2F2; border-radius:15px; }
 
 }
 
@@ -476,7 +526,7 @@ input:checked+.slider p { text-align: left;}
         flex-flow: row-reverse nowrap;
     }
 
-    .popular { 
+    .popular-wrapper { 
         width: 30%;
         margin-left: 3%;
         display: flex;
@@ -498,7 +548,7 @@ input:checked+.slider p { text-align: left;}
         flex-flow: column wrap;
         height: 100%;
     }
-    .housing { width: 70%; }
+    .housing { width: 70%; background-color: #F2F2F2; border-radius:15px;}
 
 }
 
