@@ -102,7 +102,7 @@ input { border: transparent; }
 }
 
 /* ================================== */
-/* MAIN CONTENT MARGINS  & PADDINGS */
+/* MAIN CONTENT OUTER MARGINS */
 /* ================================== */
 
 .motto,
@@ -149,8 +149,10 @@ input { border: transparent; }
 
 
 /* ================================== */
-/* INNER CONTENT MARGINS  & PADDINGS */
+/* MAIN INNER CONTENT MARGINS & PADDINGS */
 /* ================================== */
+
+.header-wrapper { padding-bottom: 2%; }
 
 /* SECTIONS  */
 /* sections title */
@@ -188,6 +190,8 @@ input { border: transparent; }
     .housing h5 { height:30px; }
     
 }
+
+#activities { padding-bottom: 5%; }
 
 
 
@@ -359,13 +363,13 @@ input { border: transparent; }
 
 .slider-container { 
     display: inline-block;
-    margin-right: 2%; margin-bottom: 2%;
+    margin-right: 2%;
 }
 
 /* up to medium screens : filters title sits on one line */
 @media screen and (max-width: 920px) {
     .filters-container > p { width: 100%;}
-    .slider-container { padding-right: 2%; }
+    .slider-container { padding-right: 2%; margin-bottom: 2%;}
 }
 /* large screens & up : filters title sits on same line as filters */
 @media screen and (min-width: 920px) {
