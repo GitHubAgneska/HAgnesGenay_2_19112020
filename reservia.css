@@ -667,31 +667,30 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* ================================== */
 
-.activities figure { 
+.activity-card { 
     position:relative;
-    border: 5px solid #fff;
     border-radius:25px;
 }
 
-.activities figure img {
+.activity-card img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.activities figure figcaption { margin: 5%; position: absolute;}
+.activity-card figcaption { margin: 3%; position: absolute;}
 
 
 /* small screens */
 @media screen and (max-width: 576px) {
-    .activities figure { height: 190px;  margin: 3% 0; }
-    .activities figure img {  
+    .activity-card  { height: 190px;  margin: 3% 0; }
+    .activity-card img {  
         height:135px;
         width:100%;
         display: block;
         object-fit: cover;
         overflow: hidden;
     }
-    .activities figure figcaption { margin: 5%; position: absolute;}
+    .activity-card figcaption { margin: 5%; position: absolute;}
 }
 
 /*  medium screens */
@@ -702,7 +701,7 @@ input:checked+.slider p { text-align: left;}
 /* medium screens & up */
 @media screen and (min-width: 576px)  {
 
-    .activities figure { 
+    .activity-card { 
         width: 47%;
         display: inline-block;
         margin:0; 
@@ -719,7 +718,7 @@ input:checked+.slider p { text-align: left;}
         align-content: space-between;
     }
 
-    .activities figure img {
+    .activity-card img {
         width:100%;
         height:100%;
         object-fit: cover;
@@ -727,13 +726,13 @@ input:checked+.slider p { text-align: left;}
         overflow: hidden;
     }
     
-    .activities figure:nth-of-type(1),
-    .activities figure:nth-of-type(4) { height: 100%; }
-    .activities figure:nth-of-type(2) { height: 235px; }
-    .activities figure:nth-of-type(3) { height: 165px; }
-    .activities figure:nth-of-type(5) { height: 195px; }
+    .activities-cards-wrapper figure:nth-of-type(1),
+    .activities-cards-wrapper figure:nth-of-type(4) { height: 100%; }
+    .activities-cards-wrapper figure:nth-of-type(2) { height: 235px; }
+    .activities-cards-wrapper figure:nth-of-type(3) { height: 165px; }
+    .activities-cards-wrapper figure:nth-of-type(5) { height: 195px; }
 
-    .activities figure figcaption { 
+    .activity-card figcaption { 
         width: 100%;
         height: 50px;
         position: absolute;
@@ -747,17 +746,18 @@ input:checked+.slider p { text-align: left;}
 
 /* large screens */
 @media screen and (min-width: 1200px) {
-    .activities { 
+    .activities-cards-wrapper { 
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
     }
+    .activity-card { /* width: 300px; */
+        margin-right: 40px; }
 
     .pic-group { 
-        width: 47%;
-        margin: 0 auto auto 0;
+        width: 50%;
     }
-    .second-group { margin: 0 0 0 auto;}
+    .first-group { margin: 0 45px 50px 0; }
     
 }
 
