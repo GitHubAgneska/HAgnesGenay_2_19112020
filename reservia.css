@@ -602,12 +602,13 @@ input:checked+.slider p { text-align: left;}
 .card-title h4 { 
     margin-bottom: 0;
     padding-right: 15%;
+    margin-top: 10px;
 }
 .card-title p { margin-top: 2%;}
 
 .pop-card-text .star-rating { 
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
 }
 .fa { font-size: 12px; color:#F2F2F2;}
 .fa.checked{ font-weight: 900;color:#0065FC;}
@@ -646,8 +647,12 @@ input:checked+.slider p { text-align: left;}
 }
 
 .housing-card-text {
-    height: 65px;
-    padding: 2%;
+    /* height: 65px; */
+    padding: 3%;
+    background-color: #fff;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
 }
 
 .housing-card-text h4, .housing-card-text p {
