@@ -323,10 +323,14 @@ input { border: transparent; }
 .fas { font-size: 18px;}
 .magnifier a > .fas, .search-word  { color: #fff; }
 
-.search-info { margin: 20px auto;}
-.search-info  p i { 
-    float: left;
-    padding-right: 10px;}
+.search-info { 
+    height: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 20px auto;
+}
+
+.search-info p { margin: 0 10px; }
 
 
 /* Extra small devices only (phones, 600px and down) */
@@ -439,9 +443,9 @@ input[type="checkbox"] {
     content: "\f6d3";
 }
 
-/* anim inner btn slide */
+/* anim inner btn slide */ /* needs fixing  */
 /* ==================== */
-input:checked+.slider::before {
+/* input:checked+.slider::before {
     -webkit-transform: translateX(100px);
     -ms-transform: translateX(100px);
     transform: translateX(100px);
@@ -452,7 +456,7 @@ input:checked+.slider {
     border: 1px solid #0065FC;
     color: red;
 }
-input:checked+.slider p { text-align: left;}
+input:checked+.slider p { text-align: left;} */
 
 
 /* Span element */
