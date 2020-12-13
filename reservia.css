@@ -93,7 +93,8 @@ a {  text-decoration: none; color: #000000; }
 input { border: transparent; }
 
 .card { box-shadow: 0px 5px 15px #cacaca;}
-.card:hover { box-shadow: 5px 10px 18px #888888; }
+.card:hover { 
+    box-shadow: 5px 10px 18px #888888; }
 
 .img-responsive {
     max-width: 100%;
@@ -114,9 +115,13 @@ input { border: transparent; }
 }
 
 
-
+/* portrait xs mobile */
+@media screen and (max-width: 360px) {
+    .search-bar-container { margin-left: 5%; }
+    .search-bar { width:  260px; }
+}
 /* Extra small devices only (phones, 600px and down) */
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 361px) and (max-width: 600px) {
     .search-bar-container { margin-left: 5%; }
     .search-bar { width:  330px; }
 }
@@ -127,9 +132,8 @@ input { border: transparent; }
     .search-bar { margin: 3% 0; width: 330px; }
 }
 
-/* up to medium screens (landscape tablets) */
+/* Up to medium screens (landscape tablets) */
 @media screen and (max-width: 768px) {
-    .popular,
     .popular,
     .housing,
     #activities { 
@@ -195,9 +199,6 @@ input { border: transparent; }
 #activities { padding-bottom: 5%; }
 
 
-
-
-
 /* ================================== */
 /* ================================== */
 /*     HEADER     */
@@ -248,7 +249,7 @@ input { border: transparent; }
     .top-nav div:nth-of-type(4) { border-bottom: 3px solid grey; }
 }
 
-/* ladscape tablet & up  : all 4 top elements = on the same row */
+/* landscape tablet & up  : all 4 top elements = on the same row */
 @media screen and (min-width: 993px) {
 
     .header-top { height: 80px; margin-bottom: 40px;}
@@ -293,7 +294,6 @@ input { border: transparent; }
     border: 1px solid #F2F2F2;
     border-radius: 15px;
 }
-
 
 .input-container { width: 230px; }
 .input-container input { height:100%; width:100%;}
@@ -490,20 +490,18 @@ input:checked+.slider p { text-align: left;}
 /* ================================== */
 /* SECTION1 + SECTION2 WRAPPER DESKTOP */
 /* ================================== */
-
-/*  medium & up to large screens : section 1+2 = above each other */
+/* Up to large screens : section 1+2 = above each other */
+/* Extra large screens  : section 1+2 = side by side */
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* housing cards width to fit into rows of 3 elements */
 @media screen and (min-width: 600px) {
-    .housing-card { width:30%;}
     .popular-wrapper { background-color: #F2F2F2; border-radius:15px; }
-
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
 
+/* Medium + large devices  */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
     .pop-cards-wrapper { 
         display: flex;
         flex-flow: row nowrap;
@@ -517,8 +515,9 @@ input:checked+.slider p { text-align: left;}
         justify-content: space-between;
         height: 100%;
     }
+    /* housing cards width to fit into rows of 2 elements */
+    .housing-card { width: 45%; margin-bottom: 3%; }
 }
-
 
 
 /* Extra large screens  : section 1+2 = side by side */
@@ -547,9 +546,14 @@ input:checked+.slider p { text-align: left;}
     .housing-cards-wrapper { 
         margin: 0;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         height: 85%;
+        width: 100%;
+        align-content: space-between;
+        justify-content: space-between;
     }
+    .housing-card { flex-basis: 30%;}
+    .housing .card { margin-right: 0; }
     .housing { width: 70%; background-color: #F2F2F2; border-radius:15px;}
 
 }
@@ -651,11 +655,11 @@ input:checked+.slider p { text-align: left;}
 }
 
 .housing-card-text {
-    /* height: 65px; */
+    height: 70px;
     padding: 3%;
     background-color: #fff;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 
 }
 
@@ -702,7 +706,7 @@ input:checked+.slider p { text-align: left;}
     .activity-card figcaption { margin: 5%; position: absolute;}
 }
 
-/*  medium screens */
+/*  medium screens only */
 @media screen and (min-width: 600px) and (max-width:991px ) {
     .second-group { flex-flow: column wrap-reverse;}
 }
