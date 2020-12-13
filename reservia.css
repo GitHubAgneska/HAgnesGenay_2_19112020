@@ -136,7 +136,7 @@ input { border: transparent; }
 @media screen and (max-width: 768px) {
     .popular,
     .housing,
-    #activities { 
+    .activities { 
         width: 90%;
         margin: auto;
     }
@@ -196,7 +196,7 @@ input { border: transparent; }
     
 }
 
-#activities { padding-bottom: 5%; }
+.activities { padding-bottom: 5%; }
 
 
 /* ================================== */
@@ -443,22 +443,6 @@ input[type="checkbox"] {
     content: "\f6d3";
 }
 
-/* anim inner btn slide */ /* needs fixing  */
-/* ==================== */
-/* input:checked+.slider::before {
-    -webkit-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    transform: translateX(100px);
-}
-
-input:checked+.slider { 
-    background-color: #DEEBFF;
-    border: 1px solid #0065FC;
-    color: red;
-}
-input:checked+.slider p { text-align: left;} */
-
-
 /* Span element */
 /* =============*/
 .slider {
@@ -482,6 +466,21 @@ input:checked+.slider p { text-align: left;} */
 /* effect on hover */
 .slider:hover { box-shadow: 5px 10px 18px #888888;}
 
+
+/* anim inner btn slide */ /* needs fixing  */
+/* ==================== */
+/* input:checked+.slider::before {
+    -webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    transform: translateX(100px);
+}
+
+input:checked+.slider { 
+    background-color: #DEEBFF;
+    border: 1px solid #0065FC;
+    color: red;
+}
+input:checked+.slider p { text-align: left;} */
 
 
 /* ================================== */
@@ -572,10 +571,8 @@ input:checked+.slider p { text-align: left;} */
 
 .pop-card {
     height: 140px;
-
     display: flex;
     flex-flow: row nowrap;
-
     border: 5px solid #fff;
     border-radius:25px;
     position: relative;
@@ -684,46 +681,47 @@ input:checked+.slider p { text-align: left;} */
 /* ================================== */
 /* ================================== */
 
-.activity-card { 
+.activity-card { border-radius: 25px;}
+.activity-card figure { 
     position:relative;
     border-radius:25px;
+    width: 100%;
+    margin: 0;
 }
-
-.activity-card img {
+.activity-card a { 
+    display: block;
+    position: relative;
+    border-radius:25px;
+}
+.activity-card figure img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-
-.activity-card figcaption { margin: 3%; position: absolute;}
+.activity-card figure figcaption { margin: 3%; position: absolute;}
 
 
 /* Extra small devices only (phones, 600px and down) */
 @media screen and (max-width: 600px) {
     .activity-card  { height: 190px;  margin: 3% 0; }
-    .activity-card img {  
+    .activity-card figure img {  
         height:135px;
         width:100%;
         display: block;
         object-fit: cover;
         overflow: hidden;
     }
-    .activity-card figcaption { margin: 5%; position: absolute;}
+    .activity-card figure figcaption { margin: 5%; position: absolute;}
 }
+
 
 /*  medium screens only */
 @media screen and (min-width: 600px) and (max-width:991px ) {
-    .second-group { flex-flow: column wrap-reverse;}
+    .second-group { flex-flow: column wrap-reverse; }
 }
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (min-width: 600px)  {
-
-    .activity-card { 
-        width: 47%;
-        display: inline-block;
-        margin:0; 
-        overflow: hidden;
-    }
 
     .pic-group { 
         height: 445px;
@@ -734,22 +732,31 @@ input:checked+.slider p { text-align: left;} */
         align-items: stretch;
         align-content: space-between;
     }
+    
+    .activities-cards-wrapper div.activity-card:nth-of-type(1),
+    .activities-cards-wrapper div.activity-card:nth-of-type(4) { height: 100%; }
+    .activities-cards-wrapper div.activity-card:nth-of-type(2) { height: 235px; }
+    .activities-cards-wrapper div.activity-card:nth-of-type(3) { height: 165px; }
+    .activities-cards-wrapper div.activity-card:nth-of-type(5) { height: 195px; }
 
-    .activity-card img {
+
+    .activity-card a,
+    .activity-card figure { height:100%;}
+
+    .activity-card { 
+        width: 47%;
+        display: inline-block;
+        margin:0; 
+        overflow: hidden;
+    }
+    .activity-card figure img {
         width:100%;
         height:100%;
         object-fit: cover;
         display: block;
         overflow: hidden;
     }
-    
-    .activities-cards-wrapper figure:nth-of-type(1),
-    .activities-cards-wrapper figure:nth-of-type(4) { height: 100%; }
-    .activities-cards-wrapper figure:nth-of-type(2) { height: 235px; }
-    .activities-cards-wrapper figure:nth-of-type(3) { height: 165px; }
-    .activities-cards-wrapper figure:nth-of-type(5) { height: 195px; }
-
-    .activity-card figcaption { 
+    .activity-card figure figcaption { 
         width: 100%;
         height: 50px;
         position: absolute;
@@ -768,12 +775,10 @@ input:checked+.slider p { text-align: left;} */
         flex-flow: row nowrap;
         width: 100%;
     }
-    .activity-card { /* width: 300px; */
-        margin-right: 40px; }
+    .activity-card { margin-right: 40px; }
 
-    .pic-group { 
-        width: 50%;
-    }
+    .pic-group { width: 50%; }
+    
     .first-group { margin: 0 45px 50px 0; }
     
 }
